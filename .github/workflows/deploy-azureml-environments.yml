@@ -34,19 +34,19 @@ jobs:
         uses: "./.github/templates/create-environment"
         with:
           environment_file: ./core/environments/train.yml
-          target: "registry"
+          target: "workspace"
           registry_name: mlr${{ vars.WORKLOAD_IDENTIFIER }}
 
       - name: Register scoring environment
         uses: "./.github/templates/create-environment"
         with:
           environment_file: ./core/environments/score.yml
-          target: "registry"
+          target: "workspace"
           registry_name: mlr${{ vars.WORKLOAD_IDENTIFIER }}
 
       - name: Register drift environment
         uses: "./.github/templates/create-environment"
         with:
           environment_file: ./core/environments/drift.yml
-          target: "registry"
+          target: "workspace"
           registry_name: mlr${{ vars.WORKLOAD_IDENTIFIER }}
