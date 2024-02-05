@@ -3,6 +3,7 @@ name: main
 endpoint_name: credit-card-default-be
 model: azureml:credit-card-default@latest
 compute: azureml:cpu-cluster
+environment: credit-card-default-score:1
 resources:
   instance_count: 1
 max_concurrency_per_instance: 2
