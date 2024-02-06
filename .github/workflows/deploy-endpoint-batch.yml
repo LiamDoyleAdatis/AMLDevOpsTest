@@ -73,8 +73,8 @@ jobs:
 
       - name: Get drift enviroment from registry
         run: |
-          ENVIRONMENT_NAME=$(yq '.name' < core/environments/drift.yml)
-          ENVIRONMENT_VERSION=$(yq '.version' < core/environments/drift.yml)
+          ENVIRONMENT_NAME="sklearn-1.1"
+          ENVIRONMENT_VERSION=22
           echo "ENVIRONMENT_DRIFT=${ENVIRONMENT_NAME}/versions/${ENVIRONMENT_VERSION}" >> $GITHUB_ENV
 
       - name: Overwrite parameters for data drift job
